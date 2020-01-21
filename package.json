@@ -7,7 +7,9 @@
   "scripts": {
     "dev": "webpack-dev-server --inline --progress --config build/webpack.dev.conf.js",
     "start": "npm run dev",
-    "build": "node build/build.js"
+    "build": "node build/build.js",
+    "deploy": "gh-pages -d build",
+    "predeploy": "npm run build"
   },
   "dependencies": {
     "@progress/kendo-buttons-vue-wrapper": "^2020.1.115",
@@ -19,6 +21,7 @@
     "@progress/kendo-vue-grid": "^0.4.2",
     "@progress/kendo-vue-intl": "^0.4.2",
     "axios": "^0.19.1",
+    "gh-pages": "^2.2.0",
     "vue": "^2.5.2",
     "vue-class-component": "^7.2.2"
   },
@@ -67,5 +70,6 @@
     "> 1%",
     "last 2 versions",
     "not ie <= 8"
-  ]
+  ],
+  "homepage": "https://jangjur.github.io/vue-weather/"
 }
