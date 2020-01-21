@@ -23,18 +23,15 @@
       @select="doSelectLeaf"
       :disabled="disabledLeaf"
     ></kendo-dropdownlist>
-    <kendo-button @click="doLocationWeatherLoad(today)" :disabled="disabledBtn"
-      ><i class="fa fa-lg fa-search"></i
-    ></kendo-button>
-    <div>
-      {{ weatherData }}
-    </div>
+    <kendo-button @click="doLocationWeatherLoad(today)" :disabled="disabledBtn">
+      <i class="fa fa-lg fa-search"></i>
+    </kendo-button>
+    <div>{{ weatherData }}</div>
   </div>
 </template>
 
 <script>
 import axios from "axios";
-import locationTop from "../json/locationTop.json";
 
 Date.prototype.yyyymmdd = function() {
   var yyyy = this.getFullYear().toString();
@@ -123,7 +120,6 @@ export default {
       })
         .then(function(response) {
           that.arrayMdl = response.data;
-          console.log(response.data);
         })
         .catch(function(err) {
           console.log(err);
