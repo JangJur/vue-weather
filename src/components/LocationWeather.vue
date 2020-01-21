@@ -23,15 +23,28 @@
       @select="doSelectLeaf"
       :disabled="disabledLeaf"
     ></kendo-dropdownlist>
+    <kendo-dropdownlist
+      id="locationTime"
+      :dataSource="arrayTime"
+      :dataTextField="'value'"
+      :dataValueField="'key'"
+      @select="doSelectTime"
+    ></kendo-dropdownlist>
     <kendo-button @click="doLocationWeatherLoad(today)" :disabled="disabledBtn">
       <i class="fa fa-lg fa-search"></i>
     </kendo-button>
-    <div>{{ weatherData }}</div>
+    <Grid
+      :style="{ 'margin-top': '1%', height: '750px' }"
+      :data-items="items"
+      :columns="columns"
+    >
+    </Grid>
   </div>
 </template>
 
 <script>
 import axios from "axios";
+import locationTime from "../json/locationTime.json";
 
 Date.prototype.yyyymmdd = function() {
   var yyyy = this.getFullYear().toString();
@@ -51,17 +64,30 @@ export default {
       arrayTop: [],
       arrayMdl: [],
       arrayLeaf: [],
+      arrayTime: locationTime,
+      selectTime: "",
       res_x: "",
       res_y: "",
       disabledMdl: true,
       disabledLeaf: true,
       disabledBtn: true,
-      weatherData: []
+      items: [],
+      columns: [
+        { field: "baseDate", title: "발표시각의 날짜" },
+        { field: "baseTime", title: "발표시각의 시분" },
+        { field: "category", title: "데이터 종류" },
+        { field: "fcstDate", title: "예보시각의 날짜" },
+        { field: "fcstTime", title: "예보시각의 시분" },
+        { field: "fcstValue", title: "예보값" },
+        { field: "nx", title: "x축(기상청 지역코드 좌표)" },
+        { field: "ny", title: "y축(기상청 지역코드 좌표)" }
+      ]
     };
   },
 
-  created() {
+  mounted() {
     this.doTopLocationLoad();
+    this.selectTime = this.arrayTime[0].key;
   },
 
   methods: {
@@ -74,7 +100,7 @@ export default {
             params: {
               serviceKey: this.serviceKey,
               base_date: this.today,
-              base_time: "0500",
+              base_time: this.selectTime,
               nx: this.res_x,
               ny: this.res_y,
               numOfRows: "44",
@@ -84,8 +110,7 @@ export default {
           }
         )
         .then(function(response) {
-          console.log("response: ", response.data.response.body.items);
-          that.weatherData = response.data.response.body.items;
+          that.items = response.data.response.body.items.item;
         })
         .catch(function(err) {
           console.log(err);
@@ -101,7 +126,6 @@ export default {
         responseType: "json"
       })
         .then(function(response) {
-          console.log(response);
           that.arrayTop = response.data;
         })
         .catch(function(err) {
@@ -158,6 +182,9 @@ export default {
       this.res_x = event.dataItem.x;
       this.res_y = event.dataItem.y;
       this.disabledBtn = false;
+    },
+    doSelectTime(event) {
+      this.selectTime = event.dataItem.key;
     }
   }
 };
