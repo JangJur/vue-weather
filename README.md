@@ -25,14 +25,15 @@ For a detailed explanation on how things work, check out the [guide](http://vuej
 > - [x] Make Project
 > - [x] Component
 >
->   > * LocationWeather
+>   > - LocationWeather
 >
 > - [x] Axios(use API)
 >
->   >  http://www.kma.go.kr/DFSROOT/POINT/DATA/top.json.txt
->   >  http://www.kma.go.kr/DFSROOT/POINT/DATA/mdl.topCode.json.txt
->   >  http://www.kma.go.kr/DFSROOT/POINT/DATA/leaf.mdlCode.json.txt
+>   > http://www.kma.go.kr/DFSROOT/POINT/DATA/top.json.txt
+>   > http://www.kma.go.kr/DFSROOT/POINT/DATA/mdl.topCode.json.txt
+>   > http://www.kma.go.kr/DFSROOT/POINT/DATA/leaf.mdlCode.json.txt
 >
-> - [] Deploy(Production)
+> - [x] Deploy(Production)
 
 > ## Page
+>   > https://jangjur.github.io/vue-weather/

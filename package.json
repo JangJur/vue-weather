@@ -7,16 +7,21 @@
   "scripts": {
     "dev": "webpack-dev-server --inline --progress --config build/webpack.dev.conf.js",
     "start": "npm run dev",
-    "build": "node build/build.js"
+    "build": "node build/build.js",
+    "deploy": "node ./node_modules/vue-gh-pages/index.js"
   },
   "dependencies": {
     "@progress/kendo-buttons-vue-wrapper": "^2020.1.115",
+    "@progress/kendo-data-query": "^1.5.2",
     "@progress/kendo-dropdowns-vue-wrapper": "^2020.1.115",
     "@progress/kendo-theme-default": "^4.11.1",
     "@progress/kendo-ui": "^2020.1.115",
     "@progress/kendo-vue-dropdowns": "^0.4.2",
+    "@progress/kendo-vue-grid": "^0.4.2",
     "@progress/kendo-vue-intl": "^0.4.2",
     "axios": "^0.19.1",
+    "gh-pages": "^2.2.0",
+    "json-groupby": "^1.1.0",
     "vue": "^2.5.2",
     "vue-class-component": "^7.2.2"
   },
@@ -49,6 +54,7 @@
     "shelljs": "^0.7.6",
     "uglifyjs-webpack-plugin": "^1.1.1",
     "url-loader": "^0.5.8",
+    "vue-gh-pages": "^1.19.0",
     "vue-loader": "^13.3.0",
     "vue-style-loader": "^3.0.1",
     "vue-template-compiler": "^2.5.2",
@@ -65,5 +71,6 @@
     "> 1%",
     "last 2 versions",
     "not ie <= 8"
-  ]
+  ],
+  "homepage": "https://github.com/jangjur/vue-weather"
 }
