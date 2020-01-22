@@ -202,6 +202,7 @@ export default {
       for (var key in items) {
         items[key].category = category[0][items[key].category];
       }
+      
       this.items = items;
     }
   }
