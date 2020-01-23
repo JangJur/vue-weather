@@ -1,16 +1,19 @@
 <template>
   <div id="app">
-    <LocationWeather />
+    <LocationWeatherSearch />
+    <LocationWeatherGrid />
   </div>
 </template>
 
 <script>
-import LocationWeather from "./components/LocationWeather";
+import LocationWeatherSearch from "./components/LocationWeatherSearch";
+import LocationWeatherGrid from "./components/LocationWeatherGrid";
 
 export default {
   name: "App",
   components: {
-    LocationWeather
+    LocationWeatherSearch,
+    LocationWeatherGrid
   }
 };
 </script>

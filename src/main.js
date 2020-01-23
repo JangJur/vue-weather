@@ -4,7 +4,8 @@ import '@progress/kendo-ui'
 import '@progress/kendo-theme-default/dist/all.css'
 import { Button, ButtonsInstaller } from '@progress/kendo-buttons-vue-wrapper'
 import { ComboBox, DropdownsInstaller } from '@progress/kendo-dropdowns-vue-wrapper'
-import { Grid } from '@progress/kendo-vue-grid';
+import { Grid } from '@progress/kendo-vue-grid'
+import { store } from './vuex/store'
 
 Vue.config.productionTip = false
 
@@ -14,6 +15,7 @@ Vue.component('Grid', Grid);
 
 new Vue({
   el: '#app',
+  store,
   components: {
     Button
   },
