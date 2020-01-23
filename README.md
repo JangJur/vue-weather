@@ -23,16 +23,31 @@ For a detailed explanation on how things work, check out the [guide](http://vuej
 > ## Recipe
 >
 > - [x] Make Project
-> - [x] Component
+> - [x] Use Component
+>   > - KendoUI (https://www.telerik.com/kendo-vue-ui/components/)
+> - [x] Make Component
 >
->   > - LocationWeather
+>   > - LocationWeatherSearch
+>   > - LocationWeatherGrid
 >
+> - [x] Vuex
 > - [x] Axios(use API)
 >
->   > http://www.kma.go.kr/DFSROOT/POINT/DATA/top.json.txt
->   > http://www.kma.go.kr/DFSROOT/POINT/DATA/mdl.topCode.json.txt
->   > http://www.kma.go.kr/DFSROOT/POINT/DATA/leaf.mdlCode.json.txt
->
+>   > - http://www.kma.go.kr/DFSROOT/POINT/DATA/top.json.txt   
+>   > - http://www.kma.go.kr/DFSROOT/POINT/DATA/mdl.topCode.json.txt   
+>   > - http://www.kma.go.kr/DFSROOT/POINT/DATA/leaf.mdlCode.json.txt   
+>   
+>   > - http://newsky2.kma.go.kr/service/SecndSrtpdFrcstInfoService2/ForecastSpaceData   
+>   >   - parameter   
+>   >     - serviceKey: yourServiceKey   
+>   >     - base_date: 조회날짜(오늘)   
+>   >     - base_time: 발표시간   
+>   >     - nx: x좌표   
+>   >     - ny: y좌표   
+>   >     - numOfRows: rows 개수   
+>   >     - pageNo: 페이지 번호   
+>   >     - _type: "json"   
+>   >
 > - [x] Deploy(Production)
 
 > ## Page
