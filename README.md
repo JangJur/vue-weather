@@ -20,7 +20,7 @@ npm run build --report
 
 For a detailed explanation on how things work, check out the [guide](http://vuejs-templates.github.io/webpack/) and [docs for vue-loader](http://vuejs.github.io/vue-loader).
 
-> ## Recipe
+## Recipe
 >
 > - [x] Make Project
 > - [x] Use Component
@@ -36,7 +36,7 @@ For a detailed explanation on how things work, check out the [guide](http://vuej
 >   > - http://www.kma.go.kr/DFSROOT/POINT/DATA/top.json.txt   
 >   > - http://www.kma.go.kr/DFSROOT/POINT/DATA/mdl.topCode.json.txt   
 >   > - http://www.kma.go.kr/DFSROOT/POINT/DATA/leaf.mdlCode.json.txt   
->   
+>   >
 >   > - http://newsky2.kma.go.kr/service/SecndSrtpdFrcstInfoService2/ForecastSpaceData   
 >   >   - parameter   
 >   >     - serviceKey: yourServiceKey   
@@ -50,5 +50,6 @@ For a detailed explanation on how things work, check out the [guide](http://vuej
 >   >
 > - [x] Deploy(Production)
 
-> ## Page
+## Page
+>
 >   > https://jangjur.github.io/vue-weather/
