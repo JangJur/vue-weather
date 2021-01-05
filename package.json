@@ -19,7 +19,7 @@
     "@progress/kendo-vue-dropdowns": "^0.4.2",
     "@progress/kendo-vue-grid": "^0.4.2",
     "@progress/kendo-vue-intl": "^0.4.2",
-    "axios": "^0.19.1",
+    "axios": "^0.21.1",
     "gh-pages": "^2.2.0",
     "json-groupby": "^1.1.0",
     "vue": "^2.5.2",
